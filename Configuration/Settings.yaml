@@ -1,0 +1,19 @@
+Jonnitto:
+  Headline:
+    container: false
+    defaultTagName: h1
+    externalTarget: _blank
+    assetExternal: 'image,video,pdf'
+    instanceOfDocument: '[instanceof Neos.Neos:Document]'
+    prependIdentifier: id-
+
+Neos:
+  Neos:
+    userInterface:
+      translation:
+        autoInclude:
+          Jonnitto.Headline:
+            - 'NodeTypes/*'
+    fusion:
+      autoInclude:
+        Jonnitto.Headline: true

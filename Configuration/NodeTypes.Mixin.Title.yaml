@@ -1,0 +1,61 @@
+'Jonnitto.Headline:Title':
+  abstract: true
+  properties:
+    title:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          placeholder: i18n
+          format:
+            sub: true
+            sup: true
+            strong: false
+            em: false
+            p: false
+            h1: false
+            h2: false
+            h3: false
+            h4: false
+            h5: false
+            removeFormat: false
+          table: {  }
+          link: {  }
+          list: {  }
+          alignment: {  }
+          formatlesspaste:
+            button: false
+            formatlessPasteOption: true
+            strippedElements:
+              - h1
+              - h2
+              - h3
+              - h4
+              - h5
+              - h6
+              - p
+              - a
+              - em
+              - strong
+              - small
+              - s
+              - cite
+              - q
+              - dfn
+              - abbr
+              - time
+              - code
+              - var
+              - samp
+              - kbd
+              - i
+              - b
+              - u
+              - mark
+              - ruby
+              - rt
+              - rp
+              - bdi
+              - bdo
+              - ins
+              - del

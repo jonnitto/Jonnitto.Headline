@@ -1,0 +1,34 @@
+prototype(Jonnitto.Headline:Headline) < prototype(Content) {
+	property = 'title'
+
+	@context {
+		property = ${this.property}
+		content = ${q(node).property(this.property)}
+		alignment = ${q(node).property('alignment')}
+	}
+
+	tagName = Fusion:Value {
+		property = ${q(node).property('tagName')}
+		default = ${Configuration.setting('Jonnitto.Headline.defaultTagName')}
+		value = ${this.property ? this.property : this.default}
+	}
+
+	attributes {
+		class = Fusion:RawArray {
+			@process.nodeType >
+			nodeType = 'jonnitto-headline'
+			style = ${q(node).property('tagStyle')}
+			alignment = ${alignment ? 'alignment-' + alignment : false}
+		}
+	}
+
+	content = Fusion:Tag {
+		tagName = Helper:LinkTagName
+		attributes = Helper:LinkAttributes
+		content = ${content}
+		@process.contentElementEditable = ContentElementEditable
+	}
+
+
+	@if.hasContentOrBackend = ${node.context.inBackend || content ? true : false}
+}

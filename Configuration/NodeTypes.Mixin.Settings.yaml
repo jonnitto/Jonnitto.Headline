@@ -1,0 +1,9 @@
+'Jonnitto.Headline:Settings':
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        settings:
+          label: i18n
+          icon: icon-header
+          position: 50

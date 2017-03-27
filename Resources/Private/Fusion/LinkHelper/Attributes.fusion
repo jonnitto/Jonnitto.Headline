@@ -3,7 +3,5 @@ prototype(Helper:LinkAttributes) < prototype(Fusion:Attributes) {
 	rel = Helper:LinkRel
 	target = Helper:LinkTarget
 	href = Helper:LinkURI
-	class = Fusion:RawArray {
-		link = Helper:LinkClass
-	}
+	class = Helper:LinkClass
 }

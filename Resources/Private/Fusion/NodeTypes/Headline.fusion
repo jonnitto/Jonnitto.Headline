@@ -17,6 +17,7 @@ prototype(Jonnitto.Headline:Headline) < prototype(Content) {
 		class = Fusion:RawArray {
 			@process.nodeType >
 			nodeType = 'jonnitto-headline'
+			container = ${Configuration.setting('Jonnitto.Headline.container')}
 			style = ${q(node).property('tagStyle')}
 			alignment = ${alignment ? 'alignment-' + alignment : false}
 		}

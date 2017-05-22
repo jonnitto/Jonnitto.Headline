@@ -1,4 +1,6 @@
 prototype(Jonnitto.Headline:Headline) < prototype(Content) {
+	templatePath = 'resource://Jonnitto.Headline/Private/Fusion/Headline/Headline.html'
+
 	property = 'title'
 
 	@context {

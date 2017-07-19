@@ -1,0 +1,77 @@
+'Jonnitto.Headline:TagName':
+  abstract: true
+  superTypes:
+    'Jonnitto.Headline:TagName.H1': true
+    'Jonnitto.Headline:TagName.H2': true
+    'Jonnitto.Headline:TagName.H3': true
+    'Jonnitto.Headline:TagName.H4': true
+
+'Jonnitto.Headline:TagName.Property':
+  abstract: true
+  superTypes:
+    'Jonnitto.Headline:Settings': true
+  properties:
+    tagName:
+      type: string
+      ui:
+        label: 'Jonnitto.Headline:NodeTypes.TagName:properties.tagName'
+        reloadIfChanged: true
+        inspector:
+          group: settings
+          position: 100
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            placeholder: 'Jonnitto.Headline:NodeTypes.TagName:properties.tagName.selectBoxEditor.placeholder'
+            allowEmpty: true
+
+'Jonnitto.Headline:TagName.H1':
+  abstract: true
+  superTypes:
+    'Jonnitto.Headline:TagName.Property': true
+  properties:
+    tagName:
+      ui:
+        inspector:
+          editorOptions:
+            values:
+              h1:
+                label: 'Jonnitto.Headline:NodeTypes.TagName:properties.tagName.selectBoxEditor.values.h1'
+
+'Jonnitto.Headline:TagName.H2':
+  abstract: true
+  superTypes:
+    'Jonnitto.Headline:TagName.Property': true
+  properties:
+    tagName:
+      ui:
+        inspector:
+          editorOptions:
+            values:
+              h2:
+                label: 'Jonnitto.Headline:NodeTypes.TagName:properties.tagName.selectBoxEditor.values.h2'
+
+'Jonnitto.Headline:TagName.H3':
+  abstract: true
+  superTypes:
+    'Jonnitto.Headline:TagName.Property': true
+  properties:
+    tagName:
+      ui:
+        inspector:
+          editorOptions:
+            values:
+              h3:
+                label: 'Jonnitto.Headline:NodeTypes.TagName:properties.tagName.selectBoxEditor.values.h3'
+
+'Jonnitto.Headline:TagName.H4':
+  abstract: true
+  superTypes:
+    'Jonnitto.Headline:TagName.Property': true
+  properties:
+    tagName:
+      ui:
+        inspector:
+          editorOptions:
+            values:
+              h4:
+                label: 'Jonnitto.Headline:NodeTypes.TagName:properties.tagName.selectBoxEditor.values.h4'

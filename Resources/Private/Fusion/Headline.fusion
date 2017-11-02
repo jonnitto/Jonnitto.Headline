@@ -1,0 +1,45 @@
+prototype(Jonnitto.Headline:Headline) < prototype(Neos.Fusion:Tag) {
+    property = 'title'
+    text = ${q(node).property(this.property)}
+    alignment = ${q(node).property('alignment')}
+    link = ${q(node).property('link')}
+
+    @context {
+        property = ${this.property}
+        text = ${this.text}
+        alignment = ${this.alignment}
+        link = ${this.link}
+    }
+
+    tagName = Neos.Fusion:Value {
+        property = ${q(node).property('tagName')}
+        default = ${Configuration.setting('Jonnitto.Headline.defaultTagName')}
+        value = ${this.property ? this.property : this.default}
+    }
+
+    attributes {
+        class = Neos.Fusion:RawArray {
+            nodeType = 'jonnitto-headline'
+            container = ${Configuration.setting('Jonnitto.Headline.container')}
+            style = ${q(node).property('tagStyle')}
+            alignment = ${alignment ? 'alignment-' + alignment : false}
+        }
+    }
+
+    content = Neos.Fusion:Tag {
+        tagName = Carbon.Link:TagName
+        attributes = Carbon.Link:Attributes
+        content = ${text}
+        @process.contentElementEditable = ContentElementEditable
+    }
+
+
+    @if.hasContentOrBackend = ${node.context.inBackend || this.text ? true : false}
+
+    @process.contentElementWrapping {
+        expression = ContentElementWrapping
+        @position = 'end 999999999'
+    }
+
+    @exceptionHandler = 'Neos\\Neos\\Fusion\\ExceptionHandlers\\NodeWrappingHandler'
+}

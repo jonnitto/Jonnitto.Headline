@@ -1,7 +1,0 @@
-prototype(Helper:LinkAttributes) < prototype(Fusion:Attributes) {
-	@context.property = 'link'
-	rel = Helper:LinkRel
-	target = Helper:LinkTarget
-	href = Helper:LinkURI
-	class = Helper:LinkClass
-}

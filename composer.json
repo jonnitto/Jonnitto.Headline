@@ -3,11 +3,7 @@
     "type": "neos-plugin",
     "license": "MIT",
     "description": "Headline for Neos CMS",
-    "keywords": [
-        "flow",
-        "neos",
-        "headline"
-    ],
+    "keywords": ["flow", "neos", "headline"],
     "authors": [
         {
             "name": "Jon Uhlmann",
@@ -17,12 +13,16 @@
         }
     ],
     "require": {
-        "neos/neos": "~3.0 || dev-master"
+        "neos/neos": "~3.0 || dev-master",
+        "carbon/link": "*"
     },
     "autoload": {
         "psr-4": {
             "Jonnitto\\Headline\\": "Classes"
         }
+    },
+    "archive": {
+        "exclude": [".editorconfig", ".github", ".gitattributes", "CODE_OF_CONDUCT.md"]
     },
     "extra": {
         "marketplace-account": "me@jonnitto.ch",

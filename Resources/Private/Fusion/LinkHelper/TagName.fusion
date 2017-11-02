@@ -1,8 +1,0 @@
-prototype(Helper:LinkTagName) < prototype(Fusion:Value) {
-	property = 'link'
-	linkTagName = 'a'
-	defaultTagName = 'span'
-
-	read = ${q(node).property(this.property)}
-	value = ${this.read ? this.linkTagName : this.defaultTagName}
-}

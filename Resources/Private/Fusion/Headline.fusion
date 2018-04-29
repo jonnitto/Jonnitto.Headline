@@ -30,14 +30,14 @@ prototype(Jonnitto.Headline:Headline) < prototype(Neos.Fusion:Tag) {
         tagName = Carbon.Link:TagName
         attributes = Carbon.Link:Attributes
         content = ${text}
-        @process.contentElementEditable = ContentElementEditable
+        @process.contentElementEditable = Neos.Neos:ContentElementEditable
     }
 
 
     @if.hasContentOrBackend = ${node.context.inBackend || this.text ? true : false}
 
     @process.contentElementWrapping {
-        expression = ContentElementWrapping
+        expression = Neos.Neos:ContentElementWrapping
         @position = 'end 999999999'
     }
 
